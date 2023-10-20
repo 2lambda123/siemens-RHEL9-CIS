@@ -9,10 +9,10 @@ rhel9cis_rule_enable_repogpg: false
 
 # Vars setup for overiding main.yml
 rhel9cis_sshd:
-    clientalivecountmax: 3
-    clientaliveinterval: 900
-    logingracetime: 60
-    # allowusers: 
-    allowgroups: sshd wheel
+    # clientalivecountmax: 3
+    clientaliveinterval: 300
+    # logingracetime: 60
+    allowusers: dummy
+    allowgroups: wheel
     # denyusers:
-    # denygroups:
+    # denygroups: dummy

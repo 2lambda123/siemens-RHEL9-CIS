@@ -1,5 +1,4 @@
 ---
-
 #### Audit Configuration Settings ####
 
 # if get_audit_binary_method == download change accordingly
@@ -13,7 +12,7 @@ audit_git_version: "benchmark_{{ benchmark_version }}"
 
 ## Goss configuration information
 # Where the goss configs and outputs are stored
-audit_out_dir: '/opt'
+audit_out_dir: "/opt"
 # Where the goss audit configuration will be stored
 audit_conf_dir: "{{ audit_out_dir }}/{{ benchmark }}-Audit"
 
@@ -25,14 +24,14 @@ post_audit_outfile: "{{ audit_out_dir }}/{{ ansible_facts.hostname }}-{{ benchma
 
 ### Audit binary settings ###
 audit_bin_version:
-    release: v0.4.4
-    AMD64_checksum: 'sha256:1c4f54b22fde9d4d5687939abc2606b0660a5d14a98afcd09b04b793d69acdc5'
+  release: v0.4.4
+  AMD64_checksum: "sha256:1c4f54b22fde9d4d5687939abc2606b0660a5d14a98afcd09b04b793d69acdc5"
 audit_bin_path: /usr/local/bin/
 audit_bin: "{{ audit_bin_path }}goss"
 audit_format: json
 
 audit_vars_path: "{{ audit_conf_dir }}/vars/{{ ansible_facts.hostname }}.yml"
 audit_results: |
-      The pre remediation results are: {{ pre_audit_summary }}.
-      The post remediation results are: {{ post_audit_summary }}.
-      Full breakdown can be found in {{ audit_out_dir }}
+  The pre remediation results are: {{ pre_audit_summary }}.
+  The post remediation results are: {{ post_audit_summary }}.
+  Full breakdown can be found in {{ audit_out_dir }}

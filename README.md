@@ -82,12 +82,12 @@ Further details can be seen in the [Changelog](./ChangeLog.md)
 
 ## Auditing (new)
 
-This can be turned on or off within the `defaults/main.yml` file with the variables `setup_audit` and `run_audit`. The value is `false` by default. Please refer to the wiki for more details. The defaults file also populates the goss checks to check only the controls that have been enabled in the ansible role.
+The audit process can be enabled and configured in the `defaults/main.yml` file using the variables `setup_audit` and `run_audit`. By default, the value is `false`, but it can be set to `true` to enable the audit. The audit process performs lightweight compliance checking and monitors live/running settings. It uses a small (12MB) go binary called [goss](https://github.com/goss-org/goss) along with relevant configurations to check the system's configuration and runtime behavior. This helps to identify and address any deviations from the desired system state and remove false positives. For more information, please refer to the wiki.
 
 This is a much quicker, very lightweight, checking (where possible) config compliance and live/running settings.
 
 A new form of auditing has been developed by using a small (12MB) go binary called [goss](https://github.com/goss-org/goss) along with the relevant configurations to check without the need for infrastructure or other tooling.
-This audit will not only check the config has the correct setting but aims to capture if it is running with that configuration also try to remove [false positives](https://www.mindpointgroup.com/blog/is-compliance-scanning-still-relevant/) in the process.
+The audit process, powered by the goss binary, not only checks the system's configuration for correct settings but also verifies if the system is running with the expected configuration. It aims to eliminate false positives in the compliance scanning process, ensuring accurate and reliable results.
 
 Refer to [RHEL9-CIS-Audit](https://github.com/ansible-lockdown/RHEL9-CIS-Audit).
 

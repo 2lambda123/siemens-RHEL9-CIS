@@ -122,6 +122,7 @@ os_check: false
   - [Ansible Getting Started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
   - [Tower User Guide](https://docs.ansible.com/ansible-tower/latest/html/userguide/index.html)
   - [Ansible Community Info](https://docs.ansible.com/ansible/latest/community/index.html)
+
 - Functioning Ansible and/or Tower Installed, configured, and running. This includes all of the base Ansible/Tower configurations, needed packages installed, and infrastructure setup.
 - Please read through the tasks in this role to gain an understanding of what each control is doing. Some of the tasks are disruptive and can have unintended consiquences in a live production system. Also familiarize yourself with the variables in the defaults/main.yml file.
 
@@ -169,10 +170,9 @@ We encourage you (the community) to contribute to this role. Please read the rul
 
 ## Known Issues
 
-CIS 1.2.4 - repo_gpgcheck is not carried out for RedHat hosts as the  default repos do not have this function. This also affect EPEL(not covered by var).
-          - Rocky and Alma not affected.
+CIS 1.2.4 - repo_gpgcheck is not carried out for RedHat hosts as the default repos do not have this function. This also affect EPEL(not covered by var). - Rocky and Alma not affected.
 Variable used to unset.
-rhel9cis_rhel_default_repo: true  # to be set to false if using repo that does have this ability
+rhel9cis_rhel_default_repo: true # to be set to false if using repo that does have this ability
 
 ## Pipeline Testing
 
@@ -189,8 +189,8 @@ uses:
 - Ansible
 
   - ansible-base 2.10.17 - python 3.8
-  - ansible-core 2.13.4  - python 3.10
-  - ansible-core 2.15.1  - python 3.11
+  - ansible-core 2.13.4 - python 3.10
+  - ansible-core 2.15.1 - python 3.11
 
 ## Added Extras
 

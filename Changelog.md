@@ -18,6 +18,7 @@
 ## 1.1.1 - Based on CIS v1.0.0
 
 - thanks to @agbrowne
+
   - [#90](https://github.com/ansible-lockdown/RHEL9-CIS/issues/90)
 
 - thanks to @mnasiadka
@@ -29,6 +30,7 @@
   - Allowing devel and main configs
   - IaC code found in alternate repo for easier mgmt
 - Added pre-commit config - Does not have to be used but can improve things
+
   - .pre-commit-config.yaml
   - .secrets.baseline
   - gitleaks and secrets detection
@@ -199,7 +201,7 @@ Jan-2023 release
 
 ```yml
 args:
-    warn: false
+  warn: false
 ```
 
 - update boolean values to true/false
